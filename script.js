@@ -26,10 +26,19 @@ convertBtn.addEventListener('click', function () {
   return kilograms;
 });
 
-userInput.addEventListener('focus', function () {
-  if (userInput.value < 1 || userInput.value === '') {
+userInput.addEventListener('input', function () {
+  if (userInput.value <= 1 || isNaN(userInput.value)) {
     userInput.style.borderColor = 'red';
     errorEl.textContent = 'Please enter a valid number!';
+
+    setTimeout(
+      () => (
+        (errorEl.textContent = ''),
+        (userInput.value = ''),
+        (userInput.style.borderColor = 'white')
+      ),
+      3000
+    );
   } else {
     userInput.style.borderColor = 'green';
     // errorEl.textContent = '';
