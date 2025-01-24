@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  background: linear-gradient(to left top, yellow, lighblue, yellow);
+  background: linear-gradient(to left top, #16161a, #7f5af0, #2cb67d);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -24,12 +24,17 @@ body {
   max-width: 450px;
 }
 
+.body-container p {
+  font-weight: 500;
+}
+
 .input-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
   font-weight: 700;
+  gap: 20px;
 }
 
 .input {
@@ -41,6 +46,17 @@ body {
   border-radius: 10px;
   color: darkgreen;
   outline: none;
+}
+
+button {
+  background-color: darkcyan;
+  border-radius: 10px;
+  color: whitesmoke;
+  width: 100px;
+  height: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .error {
